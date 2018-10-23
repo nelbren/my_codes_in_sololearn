@@ -1,9 +1,9 @@
 #!/usr/bin/ruby
-# heart.ruby v0.0.7
+# heart.ruby v0.0.8
 # nelbren@gmail.com
-# GlobalVarsToLocal
+# Array2NewAssign''
 
-a = ['','','','','','','','']
+a = Array.new(8, '')
 rc = [ [1,4], [0,5], [1,6] ]
 cb,ce = 0
 8.times do |r|
