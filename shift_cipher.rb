@@ -1,18 +1,11 @@
 #!/usr/bin/ruby
-# shift_cipher_v0.0.1.rb
+# shift_cipher_v0.0.2.rb
 # nelbren@nelbren.com
-# UseShiftCipherIn20lines
+# UseTernaryOperatorIn13lines
 def shift_str(x,d)
   r=''
   x.each_byte do |c|
-    if (c == 32)
-      na=c
-    else
-      na=c+d
-      if (na > 90)
-        na = na - 90 + 64
-      end      
-    end
+    na = c == 32 ? c : (c + d > 90 ? c + d - 26 : c + d)  
     r=r+na.chr
   end
   r

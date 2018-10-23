@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
-# heart.ruby v0.0.1
+# heart.ruby v0.0.2
 # nelbren@gmail.com
-# First try!
+# Use: Shortened if
 
 @a = ['','','','','','','','']
 8.times do |r|
@@ -19,11 +19,7 @@
       @cb = @cb + 1
   end
   7.times do |c|
-    if (@cb..@ce).include?(c)
-      @a[r] += 'x'
-    else
-      @a[r] += ' '
-    end
+    @a[r] += (@cb..@ce).include?(c) ? 'x' : ' '
   end
 end
 

@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# string_rotations_v0.0.1.rb
+# string_rotations_v0.0.2.rb
 # nelbren@nelbren.com
-# UsingSubstring
-x=gets.chomp;a=[];x.each_char{|c|x=x[1..-1]+c;a<<x};p a
+# UsingRotate
+x=gets.chomp;a=[];x.size.times{a<<x=x.chars.rotate(1).join};p a
