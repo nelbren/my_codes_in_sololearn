@@ -1,22 +1,16 @@
 #!/usr/bin/ruby
-# heart.ruby v0.0.4
+# heart.ruby v0.0.5
 # nelbren@gmail.com
-# Use: ShortBlocks2
+# Use: Case 2 Array
 
 @a = ['','','','','','','','']
+@rc = [ [1,4], [0,5], [1,6] ]
 8.times do |r|
-  case r
-    when 0
-      @cb = 1
-      @ce = 4
-    when 1
-      @cb = 0
-      @ce = 5
-    when 2
-      @cb = 1
-      @ce = 6
-    else
-      @cb = @cb + 1
+  if r > 2
+    @cb += 1
+  else
+    @cb = @rc[r][0]
+    @ce = @rc[r][1]
   end
   7.times { |c| @a[r] += (@cb..@ce).include?(c) ? 'x' : ' ' }
 end

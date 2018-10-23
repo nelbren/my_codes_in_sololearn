@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# string_rotations_v0.0.4.rb
+# string_rotations_v0.0.5.rb
 # nelbren@nelbren.com
-# UsingSubstringAndOnlyOneAssing
-a=[];(x=gets.chomp).each_char{|c|x=x[1..-1]+c;a<<x};p a
+# UsingSubstringAndOnlyOneAssingInside
+a=[];(x=gets.chomp).each_char{|c|a<<(x=x[1..-1]+c)};p a
