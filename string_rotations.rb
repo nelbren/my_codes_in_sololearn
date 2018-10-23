@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# string_rotations_v0.0.3.rb
+# string_rotations_v0.0.4.rb
 # nelbren@nelbren.com
-# UsingRegex
-x=gets.chomp;a=[];x.each_char{|c|x.gsub!(/^(.)(.*)(.)$/, '\2\3'+c);a<<x.dup};p a
+# UsingSubstringAndOnlyOneAssing
+a=[];(x=gets.chomp).each_char{|c|x=x[1..-1]+c;a<<x};p a

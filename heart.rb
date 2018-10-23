@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
-# heart.ruby v0.0.3
+# heart.ruby v0.0.4
 # nelbren@gmail.com
-# Use: ShortBlocks1
+# Use: ShortBlocks2
 
 @a = ['','','','','','','','']
 8.times do |r|
@@ -21,7 +21,4 @@
   7.times { |c| @a[r] += (@cb..@ce).include?(c) ? 'x' : ' ' }
 end
 
-@a.each do |r|
-  f = r + r.reverse
-  p f
-end
+@a.each { |r| p r + r.reverse }
