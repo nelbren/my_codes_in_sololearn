@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
-# heart.ruby v0.0.2
+# heart.ruby v0.0.3
 # nelbren@gmail.com
-# Use: Shortened if
+# Use: ShortBlocks1
 
 @a = ['','','','','','','','']
 8.times do |r|
@@ -18,9 +18,7 @@
     else
       @cb = @cb + 1
   end
-  7.times do |c|
-    @a[r] += (@cb..@ce).include?(c) ? 'x' : ' '
-  end
+  7.times { |c| @a[r] += (@cb..@ce).include?(c) ? 'x' : ' ' }
 end
 
 @a.each do |r|
