@@ -10,8 +10,7 @@ desplazar_cifrado() {
   echo -n "intento #$f: "
   for ((n=0; n<$l; n++)); do
     c=${entrada:$n:1}
-    a=$(echo -n $c | hexdump -d | gawk '{print $2}')
-    a=$(echo $a | cut -c4-5)
+    a=$(printf '%d' "'$c")
     if [ "$c" == " " ]; then
       nc=$c
     else
